@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 else
                 {
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Login Gagal", Toast.LENGTH_LONG);
+                            "Login Gagal.", Toast.LENGTH_LONG);
                     t.show();
                 }
 
