@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (!password.equals(pass)) {
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Passwqord Salah", Toast.LENGTH_LONG);
+                            "Passwqord Salah.", Toast.LENGTH_LONG);
                     t.show();
                 }
                 else
