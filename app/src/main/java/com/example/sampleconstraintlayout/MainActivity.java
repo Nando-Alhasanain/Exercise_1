@@ -35,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
                 if (nama.equals(email) && password.equals(pass))
                 {
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Login Sukses", Toast.LENGTH_LONG);
+                            "Login Sukses.", Toast.LENGTH_LONG);
                     t.show();
                 }
                 else if (!nama.equals(email))
                 {
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Email Salah", Toast.LENGTH_LONG);
+                            "Email Salah.", Toast.LENGTH_LONG);
                     t.show();
                 }
                 else if (!password.equals(pass)) {
