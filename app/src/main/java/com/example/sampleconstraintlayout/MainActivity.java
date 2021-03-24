@@ -2,6 +2,7 @@ package com.example.sampleconstraintlayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,30 +33,34 @@ public class MainActivity extends AppCompatActivity {
                 String email="admin@mail.com";
                 String pass ="123";
 
-                if (nama.equals(email) && password.equals(pass))
+                if (nama.isEmpty() || password.isEmpty())
                 {
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Login Sukses.", Toast.LENGTH_LONG);
-                    t.show();
-                }
-                else if (!nama.equals(email))
-                {
-                    Toast t = Toast.makeText(getApplicationContext(),
-                            "Email Salah.", Toast.LENGTH_LONG);
-                    t.show();
-                }
-                else if (!password.equals(pass)) {
-                    Toast t = Toast.makeText(getApplicationContext(),
-                            "Passwqord Salah.", Toast.LENGTH_LONG);
+                            "Email dan password wajib diisi!!!", Toast.LENGTH_LONG);
                     t.show();
                 }
                 else
                 {
-                    Toast t = Toast.makeText(getApplicationContext(),
-                            "Login Gagal.", Toast.LENGTH_LONG);
-                    t.show();
-                }
+                    if (nama.equals(email) && password.equals(pass))
+                    {
+                        Toast t = Toast.makeText(getApplicationContext(),
+                                "Login Sukses", Toast.LENGTH_LONG);
+                        t.show();
 
+                        Bundle b = new Bundle();
+                        b.putString("a", nama.trim());
+                        b.putString("b", password.trim());
+                        Intent i = new Intent(getApplicationContext(), ActivityHasil.class);
+                        i.putExtras(b);
+                        startActivity(i);
+                    }
+                    else
+                    {
+                        Toast t = Toast.makeText(getApplicationContext(),
+                                "Login Gagal", Toast.LENGTH_LONG);
+                        t.show();
+                    }
+                }
 
             }
         });
