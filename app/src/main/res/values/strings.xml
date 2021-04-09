@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Activity 4</string>
+    <string name="app_name">Activity 5</string>
     <string name="Login">Log in</string>
     <string name="tEmail">Email</string>
     <string name="tPassword">Password</string>
@@ -16,4 +16,11 @@
     <string name="epass">Masukkan Password</string>
     <string name="erepass">Masukkan Password Kembali</string>
     <string name="ealamat">Masukkan Alamat</string>
+    <string name="lihatdata">Lihat Data</string>
+    <string name="editdata">Edit Data</string>
+    <string name="datakontak">Data Kontak</string>
+    <string name="namaitem">Nama Item</string>
+    <string name="detailkontak">Detail Kontak</string>
+    <string name="notel">Nomor Telepon</string>
+    <string name="nama">Nama</string>
 </resources>
