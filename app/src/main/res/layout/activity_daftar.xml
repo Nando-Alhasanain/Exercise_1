@@ -1,105 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     tools:context=".DaftarActivity">
 
+    //Nama
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/wayhem"
         android:text="@string/ldaftar"
         android:textSize="15pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084" />
-
-    <EditText
-        android:id="@+id/edNama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/enama"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.009"
+        app:errorEnabled="true">
 
-    <EditText
-        android:id="@+id/edAlamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/ealamat"
-        android:inputType="textMultiLine|text"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wayhem"
+            android:ems="10"
+            android:hint="@string/enama"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+//Alamat
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edNama"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:errorEnabled="true">
 
-    <EditText
-        android:id="@+id/edEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/eemail"
-        android:inputType="textEmailAddress"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wayhem"
+            android:ems="10"
+            android:hint="@string/ealamat"
+            android:inputType="textMultiLine|text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+//Email
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edAlamat"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.300"
+        app:errorEnabled="true">
 
-    <EditText
-        android:id="@+id/edPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/epass"
-        android:inputType="textPassword"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wayhem"
+            android:ems="10"
+            android:hint="@string/eemail"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //pass
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edEmail"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:layout_constraintVertical_bias="0.0"
+        app:errorEnabled="true">
 
-    <EditText
-        android:id="@+id/edrepass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/erepass"
-        android:inputType="textPassword"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wayhem"
+            android:ems="10"
+            android:hint="@string/epass"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //repas
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edPass"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+        app:layout_constraintVertical_bias="0.0"
+        app:errorEnabled="true">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabSimpan"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edrepass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wayhem"
+            android:ems="10"
+            android:hint="@string/erepass"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/opsi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/opsi2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.800"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintVertical_bias="0.800">
+
+        <RadioButton
+            android:id="@+id/lk"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"
+            android:fontFamily="@font/wayhem"/>
+
+        <RadioButton
+            android:id="@+id/pr"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:fontFamily="@font/wayhem"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:fontFamily="@font/wayhem"
+        android:textSize="8pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edrepass"
-        app:layout_constraintVertical_bias="0.335"
-        app:srcCompat="@android:drawable/ic_menu_save" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintVertical_bias="0.066" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="55dp"
+        android:layout_height="24dp"
+        android:text="Agama"
+        android:textSize="8pt"
+        android:fontFamily="@font/wayhem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <RadioGroup
+        android:id="@+id/opsi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintVertical_bias="0.9">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:id="@+id/is"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Islam"
+                android:fontFamily="@font/wayhem"/>
+
+            <RadioButton
+                android:id="@+id/kl"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="Katolik"
+                android:fontFamily="@font/wayhem"/>
+
+            <RadioButton
+                android:id="@+id/kr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Kristen"
+                android:fontFamily="@font/wayhem"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/hd"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Hindu"
+                android:fontFamily="@font/wayhem"
+                tools:layout_editor_absoluteX="245dp"
+                tools:layout_editor_absoluteY="294dp" />
+
+            <RadioButton
+                android:id="@+id/bd"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="budha"
+                android:fontFamily="@font/wayhem"
+                tools:layout_editor_absoluteX="245dp"
+                tools:layout_editor_absoluteY="342dp" />
+
+            <RadioButton
+                android:id="@+id/kc"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Konghucu"
+                android:fontFamily="@font/wayhem"
+                tools:layout_editor_absoluteX="245dp"
+                tools:layout_editor_absoluteY="390dp" />
+
+        </TableRow>
+
+            <RadioButton
+                android:id="@+id/pkl"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Penganut kepercayaan lain"
+                android:fontFamily="@font/wayhem"
+                tools:layout_editor_absoluteX="245dp"
+                tools:layout_editor_absoluteY="390dp" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/fabSimpan"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Daftar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        app:layout_constraintVertical_bias="0.764" />
+
+    <Button
+        android:id="@+id/fabBatal"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Batal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabSimpan"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        app:layout_constraintVertical_bias="0.764" />
 </androidx.constraintlayout.widget.ConstraintLayout>

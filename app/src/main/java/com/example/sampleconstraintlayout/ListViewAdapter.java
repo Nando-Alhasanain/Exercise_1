@@ -1,5 +1,6 @@
 package com.example.sampleconstraintlayout;
 
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +9,15 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 
 
 public class ListViewAdapter extends BaseAdapter {
     Context mContext;
     LayoutInflater inflater;
+
 
     private ArrayList<ClassNama> arrayList;
 
@@ -24,6 +28,7 @@ public class ListViewAdapter extends BaseAdapter {
         this.arrayList = new ArrayList<ClassNama>();
         this.arrayList.addAll(Home_Activity.classNamaArrayList);
     }
+
 
     public class ViewHolder{
         TextView name;
@@ -57,5 +62,21 @@ public class ListViewAdapter extends BaseAdapter {
         }
         holder.name.setText(Home_Activity.classNamaArrayList.get(i).getName());
         return view;
+    }
+
+    //Filter
+    void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        Home_Activity.classNamaArrayList.clear();
+        if (charText.length() == 0) {
+            Home_Activity.classNamaArrayList.addAll(arrayList);
+        } else {
+            for (ClassNama an : arrayList) {
+                if (an.getName().toLowerCase(Locale.getDefault()).contains(charText)) {
+                    Home_Activity.classNamaArrayList.add(an);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }
